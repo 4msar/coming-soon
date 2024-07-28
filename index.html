@@ -4,29 +4,56 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <title>Coming Soon</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+            name="description"
+            content="We're working on something awesome!"
+        />
+        <meta
+            name="keywords"
+            content="coming soon, under construction, maintenance, website"
+        />
+        <meta name="author" content="Saiful Alam" />
+        <meta name="robots" content="index, follow" />
+        <meta name="theme-color" content="#000000" />
+
         <link rel="icon" type="image/png" href="/favicon.ico" />
         <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const siteName = document.getElementById("site-name");
+                siteName.innerText = window.location.hostname;
+            });
+        </script>
     </head>
-    <body>
+    <body
+        class="min-h-screen m-0 p-0 flex flex-col items-center justify-center text-center bg-no-repeat bg-cover bg-gray-900 overflow-hidden"
+        style="background-image: url(https://picsum.photos/1400/720?nature)"
+    >
         <div
-            class="bg-gray-900 h-screen flex flex-col items-center justify-center text-center"
+            class="bg-gray-900 bg-opacity-80 py-4 px-4 sm:py-20 sm:px-24 sm:rounded-lg flex flex-col items-center justify-center text-center"
         >
             <div class="text-white">
-                <h1 class="text-4xl font-bold">Coming Soon</h1>
-                <p class="mt-4 text-lg">We're working on something awesome!</p>
+                <h1 class="text-6xl font-bold mb-8" id="site-name">Hello</h1>
+                <h2 class="text-4xl font-semibold">Coming Soon</h2>
+                <p class="mt-2 text-lg">We're working on something awesome!</p>
             </div>
+
             <div class="mt-8">
-                <form action="#" method="post" class="flex items-center">
+                <form
+                    method="post"
+                    action="#"
+                    class="flex items-center sm:flex-row flex-col"
+                >
                     <input
                         type="email"
                         name="email"
                         placeholder="Enter your email"
-                        class="py-2 px-4 bg-gray-800 text-white rounded-l-md focus:outline-none"
+                        class="py-2 px-4 bg-gray-800 text-white rounded-t-md sm:rounded-l-md focus:outline-none w-full sm:w-auto"
                         required
                     />
                     <button
                         type="submit"
-                        class="bg-blue-500 py-2 px-4 text-white rounded-r-md hover:bg-blue-600 focus:outline-none"
+                        class="bg-blue-500 py-2 px-4 text-white w-full sm:w-auto rounded-b-md sm:rounded-r-md hover:bg-blue-600 focus:outline-none"
                     >
                         Subscribe
                     </button>
